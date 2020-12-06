@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ib.Controller">
+   <center>
+      <LineChart fx:id="graph" BorderPane.alignment="CENTER">
+        <xAxis>
+          <NumberAxis fx:id="xAxis"
+                      side="BOTTOM"  />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="fxAxis"
+                      side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </center>
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="BisectionMethodButton" mnemonicParsing="false" onAction="#BisectionButtonAction" text="BisectionM" textFill="#0c00ff" />
+            <Button fx:id="FalsePositionButton" mnemonicParsing="false" onAction="#FalsePositionAction" text="FalsePosM" textFill="#0c00ff" />
+            <Button fx:id="FixedPointButton" mnemonicParsing="false" onAction="#FixedPositionAction" text="FixedPointM" textFill="#0c00ff" />
+            <Button fx:id="NewtonButton" mnemonicParsing="false" onAction="#NewtonAction" text="NewtonRM" textFill="#0c00ff" />
+            <Button fx:id="SecantMethodButton" mnemonicParsing="false" onAction="#SecantAction" text="SecantM" textFill="#0c00ff" />
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <Text fx:id="findingTheRoot" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="FINDING THE ROOT" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Chalkboard SE Light" size="18.0" />
+         </font>
+      </Text>
+   </top>
+   <bottom>
+      <Text fx:id="byDavidOrtegon" strokeType="OUTSIDE" strokeWidth="0.0" text="By: David Ortegon" wrappingWidth="597.2872924804688" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Chalkboard SE Light" size="10.0" />
+         </font>
+      </Text>
+   </bottom>
+</BorderPane>
